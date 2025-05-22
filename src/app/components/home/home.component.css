@@ -1,0 +1,345 @@
+/* 01-------------header section */
+
+.home-banner {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-image {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.banner-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 8%;
+}
+
+.banner-content {
+  color: white;
+  max-width: 600px;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.description {
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.btn-custom {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: #007bff; /* Blue */
+  color: white;
+  border: none;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.btn-custom::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0%;
+  width: 100%;
+  background-color: green;
+  z-index: -1;
+  transition: height 0.4s ease;
+}
+
+.btn-custom:hover::before {
+  height: 100%;
+}
+
+.btn-custom:hover {
+  color: white;
+}
+
+
+/* Cursor Blink */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+/* Typewriter animation logic */
+.typewriter {
+  display: inline-block;
+  animation: typing 4s steps(30, end) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+}
+
+/* Optional typewriter keyframes */
+@keyframes typing {
+  0% { width: 0 }
+  50% { width: 100% }
+  100% { width: 0 }
+}
+
+
+/*02 ------------category section*/
+
+.categories-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #28a745;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.category-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.category-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.category-card p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* information-setction */
+.about-section {
+  padding: 80px 20px;
+  background-color: white;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-content {
+  flex: 1 1 500px;
+  min-width: 300px;
+}
+
+.text-content h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.text-content p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  margin: 30px 0;
+}
+
+.why-choose-us h3 {
+  font-size: 24px;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.reason {
+  background-color: #48fc3748;
+  padding: 12px 18px;
+  border-left: 5px solid #28a745;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #444;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Button with bottom-to-top green fill effect */
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.learn-more-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #28a745;
+  z-index: -1;
+  transition: height 0.3s ease;
+}
+
+.learn-more-btn:hover::before {
+  height: 100%;
+}
+
+.learn-more-btn:hover {
+  color: white;
+}
+
+.image-content {
+  flex: 1 1 400px;
+  min-width: 300px;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+}
+
+
+/* state-section */
+.stats-section {
+  position: relative;
+  background-image: url('../../../assets/globe.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.stats-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(2, 50, 0, 0.6); /* dark blue overlay */
+  z-index: 1;
+}
+
+.stats-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 30px 40px;
+  width: 250px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.stat-card:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.stat-card h3 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.stat-card p {
+  font-size: 20px;
+  font-weight: 500;
+}

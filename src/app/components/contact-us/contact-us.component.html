@@ -1,0 +1,56 @@
+<div class="contact-wrapper">
+  <div class="contact-card">
+    
+    <!-- Left Side: Info -->
+    <div class="contact-left">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Whether you have a question about our products, services, or anything else.</p>
+      <ul class="contact-details">
+        <li><strong>📍 Address:</strong> 123 Green Street, Herbal City, HC 12345</li>
+        <li><strong>📞 Phone:</strong> +91-98765-43210</li>
+        <li><strong>📧 Email:</strong> supportyourdomain.com</li>
+        <li><strong>⏰ Hours:</strong> Mon–Fri: 9am–6pm</li>
+      </ul>
+    </div>
+
+    <!-- Right Side: Form -->
+    <!-- Right Side: Form -->
+<div class="contact-right">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name</label>
+    <input id="name" type="text" formControlName="name" placeholder="Your full name" />
+    <div class="error" *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
+      Name is required (min 3 chars).
+    </div>
+
+    <div class="form-row">
+      <div class="form-col">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" formControlName="phone" placeholder="10-15 digit phone number" />
+        <div class="error" *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid">
+          Valid phone number is required.
+        </div>
+      </div>
+
+      <div class="form-col">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" placeholder="your.email@example.com" />
+        <div class="error" *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
+          Valid email is required.
+        </div>
+      </div>
+    </div>
+
+    <label for="message">Message</label>
+    <textarea id="message" formControlName="message" placeholder="Write your message here..." rows="5"></textarea>
+    <div class="error" *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
+      Message must be at least 10 characters.
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+
+  </div>
+</div>

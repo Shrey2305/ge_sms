@@ -1,0 +1,110 @@
+<section class="home-banner">
+  <div class="banner-image" [style.backgroundImage]="'url(' + currentBanner + ')'">
+    <div class="banner-overlay">
+      <div class="banner-content">
+        <h1><span class="typewriter">{{ printedText }}</span><span class="cursor">|</span></h1>
+        <p class="description">
+          We provide sustainable wellness products designed to promote health, harmony, and mindful living.
+        </p>
+        <button class="btn btn-custom btn-primary">
+          Learn More <i class="fas fa-arrow-right ms-2"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="categories-section">
+  <div class="container">
+    <h2 class="section-title">Explore Our Categories</h2>
+    <div class="cards-container">
+      <div class="category-card">
+        <img src="assets/gems.jpg" alt="Gems">
+        <h3>Jelly</h3>
+        <p>Discover our handpicked collection of precious and semi-precious stones with spiritual and aesthetic value.</p>
+        <a routerLink="/products/gems" class="card-button btn-custom">View Gems</a>
+      </div>
+
+      <div class="category-card">
+        <img src="assets/herbal.jpg" alt="Herbal">
+        <h3>Scrap</h3>
+        <p>Explore pure and natural herbal products made with traditional methods for your wellness.</p>
+        <a routerLink="/products/herbal" class="card-button">View Herbal</a>
+      </div>
+
+      <div class="category-card">
+        <img src="assets/other.jpg" alt="Yarn">
+        <h3>Yarn</h3>
+        <p>Browse through our collection of authentic lifestyle products, accessories, and more.</p>
+        <a routerLink="/products/others" class="card-button">View More</a>
+      </div>
+
+      <div class="category-card">
+        <img src="assets/other.jpg" alt="Fertiliser">
+        <h3>Fertiliser</h3>
+        <p>Enhance your crops naturally with our high-quality organic fertilizers for sustainable farming.</p>
+        <a routerLink="/products/others" class="card-button">View More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="about-section">
+  <div class="about-content">
+    <div class="text-content">
+      <h2>What We Do</h2>
+      <p>
+        At our store, we specialize in offering ethically sourced gems, naturally prepared herbal products,
+        and a variety of authentic goods that promote holistic wellness and lifestyle improvement.
+      </p>
+      <p>
+        Our team is dedicated to ensuring product quality and customer satisfaction by blending tradition
+        with modern service. Whether you're looking for spiritual energy, natural remedies, or meaningful
+        gifts — we're here to serve you.
+      </p>
+
+      <div class="why-choose-us">
+        <h3>Why Choose Us</h3>
+        <div class="reasons-grid">
+          <div class="reason"> Ethically Sourced Materials</div>
+          <div class="reason"> Natural & Organic Products</div>
+          <div class="reason"> Trusted by Thousands</div>
+          <div class="reason"> Dedicated Customer Support</div>
+          <div class="reason"> Holistic Wellness Focus</div>
+          <div class="reason"> Fast & Reliable Delivery</div>
+        </div>
+      </div>
+
+      <a routerLink="/about" class="learn-more-btn">Learn More</a>
+    </div>
+
+    <div class="image-content">
+      <img src="assets/whatwedo.jpg" alt="What We Do">
+    </div>
+  </div>
+</section>
+
+
+<section class="stats-section">
+  <div class="overlay"></div>
+  <div class="stats-content">
+    <div class="stat-card">
+      <h3>10,000+</h3>
+      <p>Happy Customers</p>
+    </div>
+    <div class="stat-card">
+      <h3>15</h3>
+      <p>Total Years</p>
+    </div>
+    <div class="stat-card">
+      <h3>5,000+</h3>
+      <p>Completed Consignments</p>
+    </div>
+  </div>
+</section>
+
+
+<app-contact-us></app-contact-us>
