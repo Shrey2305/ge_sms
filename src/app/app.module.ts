@@ -9,6 +9,9 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { JellyPageComponent } from './components/jelly-page/jelly-page.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ScrapPageComponent } from './components/scrap-page/scrap-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     AboutUsComponent,
     ContactUsComponent,
-    FooterComponent
+    FooterComponent,
+    JellyPageComponent,
+    ProductDetailsComponent,
+    ScrapPageComponent
   ],
   imports: [
     BrowserModule,

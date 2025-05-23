@@ -1,0 +1,65 @@
+<!-- Banner Section -->
+<div class="category-banner position-relative">
+  <img src="assets/banner1.jpg" alt="Jelly Banner" class="w-100 banner-img">
+  <h2 class="category-title position-absolute top-50 start-50 translate-middle text-white text-uppercase fw-bold">
+    {{product?.name}}
+  </h2>
+</div>
+<!-- Product Info -->
+    <div class="container my-5">
+  <h2 class="text-success mb-4">{{ product?.name }}</h2>
+  <div class="row align-items-start">
+    <!-- Product Image -->
+    <div class="col-md-5 mb-4 mb-md-0">
+      <img [src]="product?.image" class="img-fluid rounded shadow" alt="{{ product?.name }}">
+    </div>
+
+    <!-- Product Details Table -->
+    <div class="col-md-7">
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <th scope="row">Name</th>
+            <td>{{ product?.name }}</td>
+          </tr>
+          <tr *ngIf="product?.category">
+            <th scope="row">Category</th>
+            <td>{{ product?.category | titlecase }}</td>
+          </tr>
+          <tr *ngIf="product?.weight">
+            <th scope="row">Weight</th>
+            <td>{{ product?.weight }}</td>
+          </tr>
+          <tr *ngIf="product?.price">
+            <th scope="row">Price</th>
+            <td>{{ product?.price | currency:'INR'}}</td>
+          </tr>
+          <tr *ngIf="product?.material">
+            <th scope="row">Material</th>
+            <td>{{ product?.material }}</td>
+          </tr>
+          <tr *ngIf="product?.color">
+            <th scope="row">Color</th>
+            <td>{{ product?.color }}</td>
+          </tr>
+          <tr *ngIf="product?.composition">
+            <th scope="row">Composition</th>
+            <td>{{ product?.composition }}</td>
+          </tr>
+          <tr *ngIf="product?.origin">
+            <th scope="row">Origin</th>
+            <td>{{ product?.origin }}</td>
+          </tr>
+          <tr *ngIf="product?.usage">
+            <th scope="row">Usage</th>
+            <td>{{ product?.usage }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Description</th>
+            <td>{{ product?.description }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
